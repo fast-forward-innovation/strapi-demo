@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "experience_ones",
+  "info": {
+    "singularName": "experience-one",
+    "pluralName": "experience-ones",
+    "displayName": "Experience One",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "field_one": {
+      "type": "richtext"
+    },
+    "date_one": {
+      "type": "date"
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    }
+  }
+}

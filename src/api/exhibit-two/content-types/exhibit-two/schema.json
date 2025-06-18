@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "exhibit_twos",
+  "info": {
+    "singularName": "exhibit-two",
+    "pluralName": "exhibit-twos",
+    "displayName": "Exhibit Two"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "intro_text": {
+      "type": "text"
+    },
+    "video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "videos": {
+      "displayName": "new-component",
+      "type": "component",
+      "repeatable": true,
+      "component": "repeaters.new-component"
+    }
+  }
+}

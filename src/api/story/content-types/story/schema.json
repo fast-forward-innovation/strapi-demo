@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "Stories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Blocks": {
+      "type": "blocks"
+    },
+    "Markdown_Field": {
+      "type": "richtext"
+    },
+    "JSON_Field": {
+      "type": "json"
+    },
+    "dynamic_zone": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.slider",
+        "shared.seo",
+        "shared.rich-text",
+        "shared.quote",
+        "shared.media",
+        "shared.group-one"
+      ]
+    }
+  }
+}

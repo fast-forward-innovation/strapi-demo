@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "honorees_interactive_walls",
+  "info": {
+    "singularName": "honorees-interactive-wall",
+    "pluralName": "honorees-interactive-walls",
+    "displayName": "Honorees Interactive Wall",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "json": {
+      "type": "json"
+    },
+    "honorees_people": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::honoree.honoree"
+    },
+    "Honorees_component": {
+      "displayName": "Honorees",
+      "type": "component",
+      "repeatable": true,
+      "component": "repeaters.honorees",
+      "max": 5,
+      "min": 3
+    }
+  }
+}

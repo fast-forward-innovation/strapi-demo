@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "honorees",
+  "info": {
+    "singularName": "honoree",
+    "pluralName": "honorees",
+    "displayName": "Honorees (People)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}

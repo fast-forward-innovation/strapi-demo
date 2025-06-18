@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "postcards",
+  "info": {
+    "singularName": "postcard",
+    "pluralName": "postcards",
+    "displayName": "Surveys",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Postcards": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean"
+    },
+    "Publish_On": {
+      "type": "date"
+    },
+    "Expire_On": {
+      "type": "date"
+    }
+  }
+}
