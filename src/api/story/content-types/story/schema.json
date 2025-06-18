@@ -23,12 +23,9 @@
     "dynamic_zone": {
       "type": "dynamiczone",
       "components": [
-        "shared.slider",
-        "shared.seo",
         "shared.rich-text",
         "shared.quote",
-        "shared.media",
-        "shared.group-one"
+        "shared.media"
       ]
     }
   }

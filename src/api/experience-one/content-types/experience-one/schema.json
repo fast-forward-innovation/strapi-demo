@@ -16,11 +16,6 @@
     },
     "date_one": {
       "type": "date"
-    },
-    "slider": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.slider"
     }
   }
 }
