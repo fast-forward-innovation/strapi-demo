@@ -17,8 +17,7 @@
     "Layouts": {
       "type": "dynamiczone",
       "components": [
-        "shared.rich-text",
-        "layouts.layout-three"
+        "shared.rich-text"
       ]
     }
   }

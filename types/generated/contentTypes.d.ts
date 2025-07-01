@@ -420,9 +420,7 @@ export interface ApiDemoCollectionDemoCollection
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Layouts: Schema.Attribute.DynamicZone<
-      ['shared.rich-text', 'layouts.layout-three']
-    >;
+    Layouts: Schema.Attribute.DynamicZone<['shared.rich-text']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -451,9 +449,7 @@ export interface ApiDemoTypeDemoType extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Layouts: Schema.Attribute.DynamicZone<
-      ['layouts.layout-one', 'layouts.layout-two']
-    >;
+    Layouts: Schema.Attribute.DynamicZone<[]>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -763,6 +759,18 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
         'layouts.body-text-portrait-image',
         'layouts.landscape-image-body-text',
         'layouts.body-text-landscape-image',
+        'layouts.dual-portrait-image-body-text',
+        'layouts.body-text-dual-portrait-image',
+        'layouts.dual-landscape-image-body-text',
+        'layouts.body-text-dual-landscape-image',
+        'layouts.body-text-block-quote',
+        'layouts.block-quote-body-text',
+        'layouts.landscape-image-block-quote',
+        'layouts.block-quote-landscape-image',
+        'layouts.portrait-image-block-quote',
+        'layouts.block-quote-portrait-image',
+        'layouts.block-quote',
+        'layouts.quad-image-body-text',
       ]
     >;
     Layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &

@@ -12,10 +12,7 @@
   "attributes": {
     "Layouts": {
       "type": "dynamiczone",
-      "components": [
-        "layouts.layout-one",
-        "layouts.layout-two"
-      ]
+      "components": []
     }
   }
 }

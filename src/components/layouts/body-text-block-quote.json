@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layouts_body_text_block_quotes",
+  "info": {
+    "displayName": "Body Text - Block Quote",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "Quote": {
+      "type": "text"
+    },
+    "Source": {
+      "type": "text"
+    }
+  }
+}

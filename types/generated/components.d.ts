@@ -1,5 +1,110 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LayoutsBlockQuote extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_block_quotes';
+  info: {
+    displayName: 'Block Quote';
+    icon: 'stack';
+  };
+  attributes: {
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBlockQuoteBodyText extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_block_quote_body_texts';
+  info: {
+    displayName: 'Block Quote - Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBlockQuoteLandscapeImage
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_block_quote_landscape_images';
+  info: {
+    displayName: 'Block Quote - Landscape Image';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBlockQuotePortraitImage extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_block_quote_portrait_images';
+  info: {
+    displayName: 'Block Quote - Portrait Image';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBodyTextBlockQuote extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_body_text_block_quotes';
+  info: {
+    displayName: 'Body Text - Block Quote';
+    icon: 'stack';
+  };
+  attributes: {
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBodyTextDualLandscapeImage
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_body_text_dual_landscape_images';
+  info: {
+    displayName: 'Body Text - Dual Landscape Image';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Caption2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Credit2: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image2: Schema.Attribute.Media<'images' | 'files'>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsBodyTextDualPortraitImage
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_body_text_dual_portrait_images';
+  info: {
+    displayName: 'Body Text - Dual Portrait Image';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Caption2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Credit2: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image2: Schema.Attribute.Media<'images' | 'files'>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
 export interface LayoutsBodyTextLandscapeImage extends Struct.ComponentSchema {
   collectionName: 'components_layouts_body_text_landscape_images';
   info: {
@@ -29,6 +134,58 @@ export interface LayoutsBodyTextPortraitImage extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutsDualLandscapeImageBodyText
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_dual_landscape_image_body_texts';
+  info: {
+    displayName: 'Dual Landscape Image - Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Caption2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Credit2: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image2: Schema.Attribute.Media<'images' | 'files'>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsDualPortraitImageBodyText
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_dual_portrait_image_body_texts';
+  info: {
+    displayName: 'Dual Portrait Image - Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Caption2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Credit2: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image2: Schema.Attribute.Media<'images' | 'files'>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsLandscapeImageBlockQuote
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_landscape_image_block_quotes';
+  info: {
+    displayName: 'Landscape Image - Block Quote';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
+  };
+}
+
 export interface LayoutsLandscapeImageBodyText extends Struct.ComponentSchema {
   collectionName: 'components_layouts_landscape_image_body_texts';
   info: {
@@ -43,37 +200,18 @@ export interface LayoutsLandscapeImageBodyText extends Struct.ComponentSchema {
   };
 }
 
-export interface LayoutsLayoutOne extends Struct.ComponentSchema {
-  collectionName: 'components_layouts_layout_ones';
+export interface LayoutsPortraitImageBlockQuote extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_portrait_image_block_quotes';
   info: {
-    description: '';
-    displayName: 'Layout One';
-    icon: 'apps';
+    displayName: 'Portrait Image - Block Quote';
+    icon: 'stack';
   };
   attributes: {
-    Title: Schema.Attribute.String;
-  };
-}
-
-export interface LayoutsLayoutThree extends Struct.ComponentSchema {
-  collectionName: 'components_layouts_layout_threes';
-  info: {
-    displayName: 'Layout Three';
-    icon: 'archive';
-  };
-  attributes: {
-    Title: Schema.Attribute.String;
-  };
-}
-
-export interface LayoutsLayoutTwo extends Struct.ComponentSchema {
-  collectionName: 'components_layouts_layout_twos';
-  info: {
-    displayName: 'Layout Two';
-    icon: 'arrowDown';
-  };
-  attributes: {
-    Title: Schema.Attribute.String;
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Quote: Schema.Attribute.Text;
+    Source: Schema.Attribute.Text;
   };
 }
 
@@ -87,6 +225,26 @@ export interface LayoutsPortraitImageBodyText extends Struct.ComponentSchema {
     Caption: Schema.Attribute.String;
     Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutsQuadImageBodyText extends Struct.ComponentSchema {
+  collectionName: 'components_layouts_quad_image_body_texts';
+  info: {
+    displayName: 'Quad Image - Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.Text;
+    Credit2: Schema.Attribute.Text;
+    Credit3: Schema.Attribute.Text;
+    Credit4: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image2: Schema.Attribute.Media<'images' | 'files'>;
+    Image3: Schema.Attribute.Media<'images' | 'files'>;
+    Image4: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
   };
 }
@@ -154,13 +312,22 @@ export interface SharedRichText extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'layouts.block-quote': LayoutsBlockQuote;
+      'layouts.block-quote-body-text': LayoutsBlockQuoteBodyText;
+      'layouts.block-quote-landscape-image': LayoutsBlockQuoteLandscapeImage;
+      'layouts.block-quote-portrait-image': LayoutsBlockQuotePortraitImage;
+      'layouts.body-text-block-quote': LayoutsBodyTextBlockQuote;
+      'layouts.body-text-dual-landscape-image': LayoutsBodyTextDualLandscapeImage;
+      'layouts.body-text-dual-portrait-image': LayoutsBodyTextDualPortraitImage;
       'layouts.body-text-landscape-image': LayoutsBodyTextLandscapeImage;
       'layouts.body-text-portrait-image': LayoutsBodyTextPortraitImage;
+      'layouts.dual-landscape-image-body-text': LayoutsDualLandscapeImageBodyText;
+      'layouts.dual-portrait-image-body-text': LayoutsDualPortraitImageBodyText;
+      'layouts.landscape-image-block-quote': LayoutsLandscapeImageBlockQuote;
       'layouts.landscape-image-body-text': LayoutsLandscapeImageBodyText;
-      'layouts.layout-one': LayoutsLayoutOne;
-      'layouts.layout-three': LayoutsLayoutThree;
-      'layouts.layout-two': LayoutsLayoutTwo;
+      'layouts.portrait-image-block-quote': LayoutsPortraitImageBlockQuote;
       'layouts.portrait-image-body-text': LayoutsPortraitImageBodyText;
+      'layouts.quad-image-body-text': LayoutsQuadImageBodyText;
       'shared.items': SharedItems;
       'shared.media': SharedMedia;
       'shared.movie-story': SharedMovieStory;

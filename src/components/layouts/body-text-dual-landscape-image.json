@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_layouts_body_text_dual_landscape_images",
+  "info": {
+    "displayName": "Body Text - Dual Landscape Image",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Caption": {
+      "type": "text"
+    },
+    "Credit": {
+      "type": "text"
+    },
+    "Image2": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Caption2": {
+      "type": "text"
+    },
+    "Credit2": {
+      "type": "text"
+    }
+  }
+}

@@ -26,14 +26,15 @@
       "default": "horizontal"
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Item": {
       "type": "dynamiczone",
@@ -41,7 +42,19 @@
         "layouts.portrait-image-body-text",
         "layouts.body-text-portrait-image",
         "layouts.landscape-image-body-text",
-        "layouts.body-text-landscape-image"
+        "layouts.body-text-landscape-image",
+        "layouts.dual-portrait-image-body-text",
+        "layouts.body-text-dual-portrait-image",
+        "layouts.dual-landscape-image-body-text",
+        "layouts.body-text-dual-landscape-image",
+        "layouts.body-text-block-quote",
+        "layouts.block-quote-body-text",
+        "layouts.landscape-image-block-quote",
+        "layouts.block-quote-landscape-image",
+        "layouts.portrait-image-block-quote",
+        "layouts.block-quote-portrait-image",
+        "layouts.block-quote",
+        "layouts.quad-image-body-text"
       ]
     }
   }

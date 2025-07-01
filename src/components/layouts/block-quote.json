@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layouts_block_quotes",
+  "info": {
+    "displayName": "Block Quote",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "text"
+    },
+    "Source": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_layouts_block_quote_portrait_images",
+  "info": {
+    "displayName": "Block Quote - Portrait Image",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "text"
+    },
+    "Source": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Caption": {
+      "type": "text"
+    },
+    "Credit": {
+      "type": "text"
+    }
+  }
+}
