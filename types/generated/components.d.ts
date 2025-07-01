@@ -281,6 +281,7 @@ export interface SharedMovieStory extends Struct.ComponentSchema {
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
       Schema.Attribute.DefaultTo<'horizontal'>;
+    movements: Schema.Attribute.Relation<'oneToMany', 'api::movement.movement'>;
     Title: Schema.Attribute.String;
   };
 }

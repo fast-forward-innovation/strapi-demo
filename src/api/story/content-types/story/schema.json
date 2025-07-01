@@ -4,15 +4,15 @@
   "info": {
     "singularName": "story",
     "pluralName": "stories",
-    "displayName": "Stories",
+    "displayName": "MovementStory",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "Title": {
-      "type": "text"
+      "type": "string"
     },
     "Description": {
       "type": "text"

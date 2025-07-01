@@ -29,6 +29,11 @@
         "images",
         "files"
       ]
+    },
+    "movements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movement.movement"
     }
   }
 }

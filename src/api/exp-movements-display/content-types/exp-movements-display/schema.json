@@ -21,10 +21,10 @@
     "Description": {
       "type": "text"
     },
-    "Stories": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.movie-story"
+    "Movements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movement.movement"
     }
   }
 }

@@ -4,10 +4,11 @@
   "info": {
     "singularName": "movement",
     "pluralName": "movements",
-    "displayName": "Movement"
+    "displayName": "Movement",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "Title": {
@@ -28,12 +29,18 @@
       ]
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Stories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::story.story"
     }
   }
 }

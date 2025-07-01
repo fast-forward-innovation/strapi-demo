@@ -373,96 +373,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
-  collectionName: 'authors';
-  info: {
-    description: 'Create authors for your content';
-    displayName: 'Author';
-    pluralName: 'authors';
-    singularName: 'author';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::author.author'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDemoCollectionDemoCollection
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'demo_collections';
-  info: {
-    description: '';
-    displayName: 'Demo Collection';
-    pluralName: 'demo-collections';
-    singularName: 'demo-collection';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    Layouts: Schema.Attribute.DynamicZone<['shared.rich-text']>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::demo-collection.demo-collection'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDemoTypeDemoType extends Struct.SingleTypeSchema {
-  collectionName: 'demo_types';
-  info: {
-    displayName: 'Demo Type';
-    pluralName: 'demo-types';
-    singularName: 'demo-type';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    Layouts: Schema.Attribute.DynamicZone<[]>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::demo-type.demo-type'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiExpHonoreesWallExpHonoreesWall
   extends Struct.SingleTypeSchema {
   collectionName: 'exp_honorees_walls';
@@ -522,8 +432,8 @@ export interface ApiExpMovementsDisplayExpMovementsDisplay
       'api::exp-movements-display.exp-movements-display'
     > &
       Schema.Attribute.Private;
+    Movements: Schema.Attribute.Relation<'oneToMany', 'api::movement.movement'>;
     publishedAt: Schema.Attribute.DateTime;
-    Stories: Schema.Attribute.Component<'shared.movie-story', true>;
     Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -671,12 +581,13 @@ export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
 export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
   collectionName: 'movements';
   info: {
+    description: '';
     displayName: 'Movement';
     pluralName: 'movements';
     singularName: 'movement';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Color: Schema.Attribute.Enumeration<['green', 'red', 'blue']>;
@@ -692,6 +603,7 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Stories: Schema.Attribute.Relation<'oneToMany', 'api::story.story'>;
     Subtitle: Schema.Attribute.String;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -740,12 +652,12 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
   collectionName: 'stories';
   info: {
     description: '';
-    displayName: 'Stories';
+    displayName: 'MovementStory';
     pluralName: 'stories';
     singularName: 'story';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -779,7 +691,7 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::story.story'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1295,9 +1207,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::author.author': ApiAuthorAuthor;
-      'api::demo-collection.demo-collection': ApiDemoCollectionDemoCollection;
-      'api::demo-type.demo-type': ApiDemoTypeDemoType;
       'api::exp-honorees-wall.exp-honorees-wall': ApiExpHonoreesWallExpHonoreesWall;
       'api::exp-movements-display.exp-movements-display': ApiExpMovementsDisplayExpMovementsDisplay;
       'api::exp-pillar-display.exp-pillar-display': ApiExpPillarDisplayExpPillarDisplay;
