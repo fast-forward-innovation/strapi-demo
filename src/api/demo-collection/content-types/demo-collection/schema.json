@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demo_collections",
+  "info": {
+    "singularName": "demo-collection",
+    "pluralName": "demo-collections",
+    "displayName": "Demo Collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Layouts": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "layouts.layout-three"
+      ]
+    }
+  }
+}

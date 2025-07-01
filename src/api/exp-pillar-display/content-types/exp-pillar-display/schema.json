@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "exp_pillar_displays",
+  "info": {
+    "singularName": "exp-pillar-display",
+    "pluralName": "exp-pillar-displays",
+    "displayName": "EXP - Pillar Display"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Timeout": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

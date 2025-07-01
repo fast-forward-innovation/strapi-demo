@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "exp_movements_displays",
+  "info": {
+    "singularName": "exp-movements-display",
+    "pluralName": "exp-movements-displays",
+    "displayName": "EXP - Movements Display",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Timeout": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Stories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.movie-story"
+    }
+  }
+}

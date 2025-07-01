@@ -11,21 +11,37 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Blocks": {
-      "type": "blocks"
+    "Title": {
+      "type": "text"
     },
-    "Markdown_Field": {
-      "type": "richtext"
+    "Description": {
+      "type": "text"
     },
-    "JSON_Field": {
-      "type": "json"
+    "Layout": {
+      "type": "enumeration",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ],
+      "default": "horizontal"
     },
-    "dynamic_zone": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Item": {
       "type": "dynamiczone",
       "components": [
-        "shared.rich-text",
-        "shared.quote",
-        "shared.media"
+        "layouts.portrait-image-body-text",
+        "layouts.body-text-portrait-image",
+        "layouts.landscape-image-body-text",
+        "layouts.body-text-landscape-image"
       ]
     }
   }

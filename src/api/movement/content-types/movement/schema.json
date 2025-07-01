@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movements",
+  "info": {
+    "singularName": "movement",
+    "pluralName": "movements",
+    "displayName": "Movement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "red",
+        "blue"
+      ]
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

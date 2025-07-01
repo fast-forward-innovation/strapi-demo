@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "demo_types",
+  "info": {
+    "singularName": "demo-type",
+    "pluralName": "demo-types",
+    "displayName": "Demo Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Layouts": {
+      "type": "dynamiczone",
+      "components": [
+        "layouts.layout-one",
+        "layouts.layout-two"
+      ]
+    }
+  }
+}

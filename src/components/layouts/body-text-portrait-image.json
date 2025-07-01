@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layouts_body_text_portrait_images",
+  "info": {
+    "displayName": "Body Text - Portrait Image",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "Credit": {
+      "type": "text"
+    }
+  }
+}

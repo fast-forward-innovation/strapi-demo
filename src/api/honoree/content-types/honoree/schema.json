@@ -4,14 +4,63 @@
   "info": {
     "singularName": "honoree",
     "pluralName": "honorees",
-    "displayName": "Honorees (People)"
+    "displayName": "Honoree",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "FirstName": {
       "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "integer",
+      "min": 1900,
+      "max": 2100
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Quote": {
+      "type": "text"
+    },
+    "Video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "YearText": {
+      "type": "string",
+      "regex": "(19\\d{2}|20\\d{2}|2100)"
     }
   }
 }

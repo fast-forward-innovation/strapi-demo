@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "exp_say_their_names_projections",
+  "info": {
+    "singularName": "exp-say-their-names-projection",
+    "pluralName": "exp-say-their-names-projections",
+    "displayName": "EXP - Say Their Names Projection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Timeout": {
+      "type": "biginteger"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

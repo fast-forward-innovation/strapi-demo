@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layouts_body_text_landscape_images",
+  "info": {
+    "displayName": "Body Text - Landscape Image",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Caption": {
+      "type": "string"
+    },
+    "Credit": {
+      "type": "string"
+    }
+  }
+}

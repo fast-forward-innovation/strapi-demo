@@ -404,61 +404,192 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
-  collectionName: 'categories';
+export interface ApiDemoCollectionDemoCollection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'demo_collections';
   info: {
-    description: 'Organize your content into categories';
-    displayName: 'Category';
-    pluralName: 'categories';
-    singularName: 'category';
+    description: '';
+    displayName: 'Demo Collection';
+    pluralName: 'demo-collections';
+    singularName: 'demo-collection';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
+    Layouts: Schema.Attribute.DynamicZone<
+      ['shared.rich-text', 'layouts.layout-three']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::category.category'
+      'api::demo-collection.demo-collection'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiExperienceOneExperienceOne extends Struct.SingleTypeSchema {
-  collectionName: 'experience_ones';
+export interface ApiDemoTypeDemoType extends Struct.SingleTypeSchema {
+  collectionName: 'demo_types';
   info: {
-    description: '';
-    displayName: 'Experience One';
-    pluralName: 'experience-ones';
-    singularName: 'experience-one';
+    displayName: 'Demo Type';
+    pluralName: 'demo-types';
+    singularName: 'demo-type';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date_one: Schema.Attribute.Date;
-    field_one: Schema.Attribute.RichText;
+    Layouts: Schema.Attribute.DynamicZone<
+      ['layouts.layout-one', 'layouts.layout-two']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::experience-one.experience-one'
+      'api::demo-type.demo-type'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExpHonoreesWallExpHonoreesWall
+  extends Struct.SingleTypeSchema {
+  collectionName: 'exp_honorees_walls';
+  info: {
+    description: '';
+    displayName: 'EXP - Honorees Wall';
+    pluralName: 'exp-honorees-walls';
+    singularName: 'exp-honorees-wall';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Honorees: Schema.Attribute.Relation<'oneToMany', 'api::honoree.honoree'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-honorees-wall.exp-honorees-wall'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Timeout: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Video1: Schema.Attribute.Media<'files' | 'videos'>;
+    Video2: Schema.Attribute.Media<'files' | 'videos'>;
+    Video3: Schema.Attribute.Media<'files' | 'videos'>;
+    Video4: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
+export interface ApiExpMovementsDisplayExpMovementsDisplay
+  extends Struct.SingleTypeSchema {
+  collectionName: 'exp_movements_displays';
+  info: {
+    description: '';
+    displayName: 'EXP - Movements Display';
+    pluralName: 'exp-movements-displays';
+    singularName: 'exp-movements-display';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-movements-display.exp-movements-display'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Stories: Schema.Attribute.Component<'shared.movie-story', true>;
+    Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExpPillarDisplayExpPillarDisplay
+  extends Struct.SingleTypeSchema {
+  collectionName: 'exp_pillar_displays';
+  info: {
+    displayName: 'EXP - Pillar Display';
+    pluralName: 'exp-pillar-displays';
+    singularName: 'exp-pillar-display';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-pillar-display.exp-pillar-display'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
+  extends Struct.SingleTypeSchema {
+  collectionName: 'exp_say_their_names_projections';
+  info: {
+    displayName: 'EXP - Say Their Names Projection';
+    pluralName: 'exp-say-their-names-projections';
+    singularName: 'exp-say-their-names-projection';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-say-their-names-projection.exp-say-their-names-projection'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Timeout: Schema.Attribute.BigInteger;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -499,7 +630,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
   collectionName: 'honorees';
   info: {
-    displayName: 'Honorees (People)';
+    description: '';
+    displayName: 'Honoree';
     pluralName: 'honorees';
     singularName: 'honoree';
   };
@@ -510,56 +642,62 @@ export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    FirstName: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    LastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::honoree.honoree'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    Quote: Schema.Attribute.Text;
+    Thumbnail: Schema.Attribute.Media<'images' | 'files'>;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Video: Schema.Attribute.Media<'files' | 'videos'>;
+    Year: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2100;
+          min: 1900;
+        },
+        number
+      >;
+    YearText: Schema.Attribute.String;
   };
 }
 
-export interface ApiHonoreesInteractiveWallHonoreesInteractiveWall
-  extends Struct.SingleTypeSchema {
-  collectionName: 'honorees_interactive_walls';
+export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
+  collectionName: 'movements';
   info: {
-    description: '';
-    displayName: 'Exhibit - Honorees Interactive Wall';
-    pluralName: 'honorees-interactive-walls';
-    singularName: 'honorees-interactive-wall';
+    displayName: 'Movement';
+    pluralName: 'movements';
+    singularName: 'movement';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    Color: Schema.Attribute.Enumeration<['green', 'red', 'blue']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Honorees_component: Schema.Attribute.Component<'repeaters.honorees', true> &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 5;
-          min: 3;
-        },
-        number
-      >;
-    honorees_people: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::honoree.honoree'
-    >;
-    json: Schema.Attribute.JSON;
+    Description: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::honorees-interactive-wall.honorees-interactive-wall'
+      'api::movement.movement'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Subtitle: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -614,19 +752,26 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Blocks: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dynamic_zone: Schema.Attribute.DynamicZone<
-      ['shared.rich-text', 'shared.quote', 'shared.media']
+    Description: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Item: Schema.Attribute.DynamicZone<
+      [
+        'layouts.portrait-image-body-text',
+        'layouts.body-text-portrait-image',
+        'layouts.landscape-image-body-text',
+        'layouts.body-text-landscape-image',
+      ]
     >;
-    JSON_Field: Schema.Attribute.JSON;
+    Layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
+      Schema.Attribute.DefaultTo<'horizontal'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::story.story'> &
       Schema.Attribute.Private;
-    Markdown_Field: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1143,11 +1288,15 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::author.author': ApiAuthorAuthor;
-      'api::category.category': ApiCategoryCategory;
-      'api::experience-one.experience-one': ApiExperienceOneExperienceOne;
+      'api::demo-collection.demo-collection': ApiDemoCollectionDemoCollection;
+      'api::demo-type.demo-type': ApiDemoTypeDemoType;
+      'api::exp-honorees-wall.exp-honorees-wall': ApiExpHonoreesWallExpHonoreesWall;
+      'api::exp-movements-display.exp-movements-display': ApiExpMovementsDisplayExpMovementsDisplay;
+      'api::exp-pillar-display.exp-pillar-display': ApiExpPillarDisplayExpPillarDisplay;
+      'api::exp-say-their-names-projection.exp-say-their-names-projection': ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection;
       'api::global.global': ApiGlobalGlobal;
       'api::honoree.honoree': ApiHonoreeHonoree;
-      'api::honorees-interactive-wall.honorees-interactive-wall': ApiHonoreesInteractiveWallHonoreesInteractiveWall;
+      'api::movement.movement': ApiMovementMovement;
       'api::postcard.postcard': ApiPostcardPostcard;
       'api::story.story': ApiStoryStory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
