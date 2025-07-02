@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_pillar_story_layouts_landscape_image_body_text",
+    "info": {
+        "displayName": "Landscape Image - Body Text",
+        "icon": "stack",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files"
+            ]
+        },
+        "Caption": {
+            "type": "text"
+        },
+        "Credit": {
+            "type": "text"
+        },
+        "Text": {
+            "type": "text"
+        }
+    }
+}

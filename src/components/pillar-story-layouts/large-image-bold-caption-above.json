@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_pillar_story_layouts_large_image_bold_caption_above",
+    "info": {
+        "displayName": "Large Image - Bold Caption Above",
+        "icon": "stack",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Text": {
+            "type": "text"
+        },
+        "Image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files"
+            ]
+        },
+        "Caption": {
+            "type": "text"
+        },
+        "Credit": {
+            "type": "text"
+        }
+    }
+}

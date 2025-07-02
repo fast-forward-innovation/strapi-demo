@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_pillar_story_layouts_body_text_portrait_images",
+    "info": {
+        "displayName": "Body Text - Portrait Image",
+        "icon": "stack",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Text": {
+            "type": "text"
+        },
+        "Image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files"
+            ]
+        },
+        "Caption": {
+            "type": "text"
+        },
+        "Credit": {
+            "type": "text"
+        }
+    }
+}

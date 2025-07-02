@@ -639,6 +639,22 @@ export interface ApiPillarStoryChapterPillarStoryChapter
       [
         'pillar-story-layouts.body-text',
         'pillar-story-layouts.portrait-image-body-text',
+        'pillar-story-layouts.block-quote',
+        'pillar-story-layouts.body-bold-statement',
+        'pillar-story-layouts.body-text-landscape-image',
+        'pillar-story-layouts.body-text-portrait-image',
+        'pillar-story-layouts.body-very-bold-statement',
+        'pillar-story-layouts.bold-statement-boxed',
+        'pillar-story-layouts.circle-graphic-statement',
+        'pillar-story-layouts.landscape-image-body-text',
+        'pillar-story-layouts.large-image-bold-caption-above',
+        'pillar-story-layouts.large-image-bold-caption',
+        'pillar-story-layouts.portrait-image-body-text',
+        'pillar-story-layouts.semi-bold-statement',
+        'pillar-story-layouts.square-graphic-statement',
+        'pillar-story-layouts.statement-circle-graphic',
+        'pillar-story-layouts.statement-square-graphic',
+        'pillar-story-layouts.very-bold-statement',
       ]
     >;
     Title: Schema.Attribute.String;

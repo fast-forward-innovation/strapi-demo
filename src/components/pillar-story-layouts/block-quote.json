@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pillar_story_layouts_block_quotes",
+  "info": {
+    "displayName": "Block Quote",
+    "icon": "quote",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "text"
+    },
+    "Source": {
+      "type": "text"
+    }
+  }
+}

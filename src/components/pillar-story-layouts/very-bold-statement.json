@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_pillar_story_layouts_very_bold_statement",
+    "info": {
+        "displayName": "Very Bold Statement",
+        "icon": "stack",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Text": {
+            "type": "text"
+        }
+    }
+}

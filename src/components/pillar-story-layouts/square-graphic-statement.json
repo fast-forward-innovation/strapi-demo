@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_pillar_story_layouts_portrait_image_body_text",
+  "collectionName": "components_pillar_story_layouts_square_graphic_statements",
   "info": {
-    "displayName": "Portrait Image - Body Text",
+    "displayName": "Square Graphic Statement",
     "icon": "stack",
     "description": ""
   },
@@ -15,12 +15,6 @@
         "images",
         "files"
       ]
-    },
-    "Caption": {
-      "type": "text"
-    },
-    "Credit": {
-      "type": "text"
     },
     "Text": {
       "type": "text"

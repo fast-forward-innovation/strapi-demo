@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_pillar_story_layouts_bold_statement_boxed",
+    "info": {
+        "displayName": "Bold Statement - Boxed",
+        "icon": "stack"
+    },
+    "options": {},
+    "attributes": {
+        "Text": {
+            "type": "text"
+        }
+    }
+}

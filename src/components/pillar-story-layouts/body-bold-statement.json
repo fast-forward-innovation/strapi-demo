@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_pillar_story_layouts_body_bold_statements",
+    "info": {
+        "displayName": "Body Bold Statement",
+        "icon": "stack",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Text": {
+            "type": "text"
+        },
+        "Text2": {
+            "type": "text"
+        }
+    }
+}
