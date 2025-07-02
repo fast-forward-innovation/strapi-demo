@@ -249,6 +249,30 @@ export interface LayoutsQuadImageBodyText extends Struct.ComponentSchema {
   };
 }
 
+export interface PillarStoryLayoutsBodyText extends Struct.ComponentSchema {
+  collectionName: 'components_pillar_story_layouts_body_texts';
+  info: {
+    displayName: 'Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface PillarStoryLayoutsPortraitImageBodyText
+  extends Struct.ComponentSchema {
+  collectionName: 'components_pillar_story_layouts_portrait_image_body_texts';
+  info: {
+    displayName: 'Portrait Image - Body Text';
+    icon: 'stack';
+  };
+  attributes: {
+    Caption: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
 export interface SharedItems extends Struct.ComponentSchema {
   collectionName: 'components_shared_items';
   info: {
@@ -329,6 +353,8 @@ declare module '@strapi/strapi' {
       'layouts.portrait-image-block-quote': LayoutsPortraitImageBlockQuote;
       'layouts.portrait-image-body-text': LayoutsPortraitImageBodyText;
       'layouts.quad-image-body-text': LayoutsQuadImageBodyText;
+      'pillar-story-layouts.body-text': PillarStoryLayoutsBodyText;
+      'pillar-story-layouts.portrait-image-body-text': PillarStoryLayoutsPortraitImageBodyText;
       'shared.items': SharedItems;
       'shared.media': SharedMedia;
       'shared.movie-story': SharedMovieStory;

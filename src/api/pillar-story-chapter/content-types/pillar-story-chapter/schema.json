@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pillar_story_chapters",
+  "info": {
+    "singularName": "pillar-story-chapter",
+    "pluralName": "pillar-story-chapters",
+    "displayName": "PillarStoryChapter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "StoryItems": {
+      "type": "dynamiczone",
+      "components": [
+        "pillar-story-layouts.body-text",
+        "pillar-story-layouts.portrait-image-body-text"
+      ]
+    }
+  }
+}

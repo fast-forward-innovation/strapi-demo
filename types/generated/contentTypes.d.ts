@@ -612,6 +612,72 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPillarStoryChapterPillarStoryChapter
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'pillar_story_chapters';
+  info: {
+    displayName: 'PillarStoryChapter';
+    pluralName: 'pillar-story-chapters';
+    singularName: 'pillar-story-chapter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Icon: Schema.Attribute.Media<'images' | 'files'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pillar-story-chapter.pillar-story-chapter'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    StoryItems: Schema.Attribute.DynamicZone<
+      [
+        'pillar-story-layouts.body-text',
+        'pillar-story-layouts.portrait-image-body-text',
+      ]
+    >;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
+  collectionName: 'pillar_stories';
+  info: {
+    displayName: 'PillarStory';
+    pluralName: 'pillar-stories';
+    singularName: 'pillar-story';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pillar-story.pillar-story'
+    > &
+      Schema.Attribute.Private;
+    MenuImage: Schema.Attribute.Media<'images' | 'files'>;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostcardPostcard extends Struct.CollectionTypeSchema {
   collectionName: 'postcards';
   info: {
@@ -1214,6 +1280,8 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::honoree.honoree': ApiHonoreeHonoree;
       'api::movement.movement': ApiMovementMovement;
+      'api::pillar-story-chapter.pillar-story-chapter': ApiPillarStoryChapterPillarStoryChapter;
+      'api::pillar-story.pillar-story': ApiPillarStoryPillarStory;
       'api::postcard.postcard': ApiPostcardPostcard;
       'api::story.story': ApiStoryStory;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_pillar_story_layouts_body_texts",
+  "info": {
+    "displayName": "Body Text",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pillar_stories",
+  "info": {
+    "singularName": "pillar-story",
+    "pluralName": "pillar-stories",
+    "displayName": "PillarStory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "MenuImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
