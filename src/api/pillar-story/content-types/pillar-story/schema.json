@@ -23,6 +23,11 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "pillar_story_chapters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pillar-story-chapter.pillar-story-chapter"
     }
   }
 }

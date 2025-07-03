@@ -475,6 +475,7 @@ export interface ApiExpPillarDisplayExpPillarDisplay
   extends Struct.SingleTypeSchema {
   collectionName: 'exp_pillar_displays';
   info: {
+    description: '';
     displayName: 'EXP - Pillar Display';
     pluralName: 'exp-pillar-displays';
     singularName: 'exp-pillar-display';
@@ -492,6 +493,10 @@ export interface ApiExpPillarDisplayExpPillarDisplay
       'api::exp-pillar-display.exp-pillar-display'
     > &
       Schema.Attribute.Private;
+    pillar_stories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pillar-story.pillar-story'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
     Title: Schema.Attribute.String;
@@ -719,6 +724,10 @@ export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     MenuImage: Schema.Attribute.Media<'images' | 'files'>;
+    pillar_story_chapters: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pillar-story-chapter.pillar-story-chapter'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
