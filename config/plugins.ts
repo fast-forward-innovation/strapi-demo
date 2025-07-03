@@ -6,6 +6,7 @@ export default () => ({
             maxLimit: 250,
             apolloServer: {
                 introspection: true,    // ✅ Allow introspection in production
+                playground: true,       // ✅ Enable GraphQL Playground
             },
         },
     },
