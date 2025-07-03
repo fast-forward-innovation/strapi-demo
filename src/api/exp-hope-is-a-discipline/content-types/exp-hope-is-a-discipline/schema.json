@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "exp_hope_is_a_disciplines",
+  "info": {
+    "singularName": "exp-hope-is-a-discipline",
+    "pluralName": "exp-hope-is-a-disciplines",
+    "displayName": "EXP - Hope is a Discipline"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Playlist": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

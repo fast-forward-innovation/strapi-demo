@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "victims",
+  "info": {
+    "singularName": "victim",
+    "pluralName": "victims",
+    "displayName": "Victim"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Year": {
+      "type": "integer"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

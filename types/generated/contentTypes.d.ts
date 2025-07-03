@@ -409,6 +409,35 @@ export interface ApiExpHonoreesWallExpHonoreesWall
   };
 }
 
+export interface ApiExpHopeIsADisciplineExpHopeIsADiscipline
+  extends Struct.SingleTypeSchema {
+  collectionName: 'exp_hope_is_a_disciplines';
+  info: {
+    displayName: 'EXP - Hope is a Discipline';
+    pluralName: 'exp-hope-is-a-disciplines';
+    singularName: 'exp-hope-is-a-discipline';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::exp-hope-is-a-discipline.exp-hope-is-a-discipline'
+    > &
+      Schema.Attribute.Private;
+    Playlist: Schema.Attribute.Media<'images' | 'files', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiExpMovementsDisplayExpMovementsDisplay
   extends Struct.SingleTypeSchema {
   collectionName: 'exp_movements_displays';
@@ -476,6 +505,7 @@ export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
   extends Struct.SingleTypeSchema {
   collectionName: 'exp_say_their_names_projections';
   info: {
+    description: '';
     displayName: 'EXP - Say Their Names Projection';
     pluralName: 'exp-say-their-names-projections';
     singularName: 'exp-say-their-names-projection';
@@ -487,6 +517,10 @@ export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    FeaturedDescription: Schema.Attribute.Text;
+    FeaturedImage: Schema.Attribute.Media<'files' | 'images'>;
+    FeaturedName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -494,11 +528,11 @@ export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Timeout: Schema.Attribute.BigInteger;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Victims: Schema.Attribute.Relation<'oneToMany', 'api::victim.victim'>;
   };
 }
 
@@ -777,6 +811,36 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVictimVictim extends Struct.CollectionTypeSchema {
+  collectionName: 'victims';
+  info: {
+    displayName: 'Victim';
+    pluralName: 'victims';
+    singularName: 'victim';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<'images' | 'files'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::victim.victim'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Year: Schema.Attribute.Integer;
   };
 }
 
@@ -1290,6 +1354,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::exp-honorees-wall.exp-honorees-wall': ApiExpHonoreesWallExpHonoreesWall;
+      'api::exp-hope-is-a-discipline.exp-hope-is-a-discipline': ApiExpHopeIsADisciplineExpHopeIsADiscipline;
       'api::exp-movements-display.exp-movements-display': ApiExpMovementsDisplayExpMovementsDisplay;
       'api::exp-pillar-display.exp-pillar-display': ApiExpPillarDisplayExpPillarDisplay;
       'api::exp-say-their-names-projection.exp-say-their-names-projection': ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection;
@@ -1300,6 +1365,7 @@ declare module '@strapi/strapi' {
       'api::pillar-story.pillar-story': ApiPillarStoryPillarStory;
       'api::postcard.postcard': ApiPostcardPostcard;
       'api::story.story': ApiStoryStory;
+      'api::victim.victim': ApiVictimVictim;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

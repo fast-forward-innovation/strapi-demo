@@ -4,17 +4,37 @@
   "info": {
     "singularName": "exp-say-their-names-projection",
     "pluralName": "exp-say-their-names-projections",
-    "displayName": "EXP - Say Their Names Projection"
+    "displayName": "EXP - Say Their Names Projection",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Timeout": {
-      "type": "biginteger"
-    },
     "Title": {
       "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "FeaturedName": {
+      "type": "string"
+    },
+    "FeaturedImage": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "FeaturedDescription": {
+      "type": "text"
+    },
+    "Victims": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::victim.victim"
     }
   }
 }
