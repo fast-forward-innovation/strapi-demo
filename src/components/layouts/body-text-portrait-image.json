@@ -7,7 +7,7 @@
   "options": {},
   "attributes": {
     "Text": {
-      "type": "string"
+      "type": "text"
     },
     "Image": {
       "allowedTypes": [
@@ -18,10 +18,10 @@
       "multiple": false
     },
     "Caption": {
-      "type": "string"
+      "type": "text"
     },
     "Credit": {
-      "type": "text"
+      "type": "string"
     }
   }
 }

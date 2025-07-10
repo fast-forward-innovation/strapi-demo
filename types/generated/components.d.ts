@@ -34,7 +34,7 @@ export interface LayoutsBlockQuoteLandscapeImage
   };
   attributes: {
     Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Quote: Schema.Attribute.Text;
     Source: Schema.Attribute.Text;
@@ -49,7 +49,7 @@ export interface LayoutsBlockQuotePortraitImage extends Struct.ComponentSchema {
   };
   attributes: {
     Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Quote: Schema.Attribute.Text;
     Source: Schema.Attribute.Text;
@@ -79,8 +79,8 @@ export interface LayoutsBodyTextDualLandscapeImage
   attributes: {
     Caption: Schema.Attribute.Text;
     Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Credit2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
+    Credit2: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Image2: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -97,8 +97,8 @@ export interface LayoutsBodyTextDualPortraitImage
   attributes: {
     Caption: Schema.Attribute.Text;
     Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Credit2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
+    Credit2: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Image2: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -113,7 +113,7 @@ export interface LayoutsBodyTextLandscapeImage extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.String;
+    Caption: Schema.Attribute.Text;
     Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -127,10 +127,10 @@ export interface LayoutsBodyTextPortraitImage extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.String;
-    Credit: Schema.Attribute.Text;
+    Caption: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.String;
+    Text: Schema.Attribute.Text;
   };
 }
 
@@ -144,8 +144,8 @@ export interface LayoutsDualLandscapeImageBodyText
   attributes: {
     Caption: Schema.Attribute.Text;
     Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Credit2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
+    Credit2: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Image2: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -162,8 +162,8 @@ export interface LayoutsDualPortraitImageBodyText
   attributes: {
     Caption: Schema.Attribute.Text;
     Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Credit2: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
+    Credit2: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Image2: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -179,7 +179,7 @@ export interface LayoutsLandscapeImageBlockQuote
   };
   attributes: {
     Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Quote: Schema.Attribute.Text;
     Source: Schema.Attribute.Text;
@@ -208,7 +208,7 @@ export interface LayoutsPortraitImageBlockQuote extends Struct.ComponentSchema {
   };
   attributes: {
     Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
+    Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Quote: Schema.Attribute.Text;
     Source: Schema.Attribute.Text;
@@ -222,7 +222,7 @@ export interface LayoutsPortraitImageBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.String;
+    Caption: Schema.Attribute.Text;
     Credit: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Text: Schema.Attribute.Text;
@@ -240,7 +240,7 @@ export interface LayoutsQuadImageBodyText extends Struct.ComponentSchema {
     Credit: Schema.Attribute.Text;
     Credit2: Schema.Attribute.Text;
     Credit3: Schema.Attribute.Text;
-    Credit4: Schema.Attribute.Text;
+    Credit4: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files'>;
     Image2: Schema.Attribute.Media<'images' | 'files'>;
     Image3: Schema.Attribute.Media<'images' | 'files'>;

@@ -20,7 +20,7 @@
       ]
     },
     "Caption": {
-      "type": "string"
+      "type": "text"
     },
     "Credit": {
       "type": "string"

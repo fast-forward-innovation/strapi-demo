@@ -15,7 +15,7 @@
       "multiple": false
     },
     "Caption": {
-      "type": "string"
+      "type": "text"
     },
     "Credit": {
       "type": "string"

@@ -21,7 +21,7 @@
       "type": "text"
     },
     "Credit": {
-      "type": "text"
+      "type": "string"
     },
     "Image2": {
       "allowedTypes": [
@@ -35,7 +35,7 @@
       "type": "text"
     },
     "Credit2": {
-      "type": "text"
+      "type": "string"
     }
   }
 }
