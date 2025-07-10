@@ -620,7 +620,19 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    color: Schema.Attribute.Enumeration<['green', 'red', 'blue']>;
+    color: Schema.Attribute.Enumeration<
+      [
+        'primaryBlue',
+        'goldenYellow',
+        'vividPurple',
+        'brightOrange',
+        'oliveGreen',
+        'cherryRed',
+        'tealBlue',
+        'coralPink',
+        'seaGreen',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

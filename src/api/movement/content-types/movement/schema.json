@@ -23,9 +23,15 @@
     "color": {
       "type": "enumeration",
       "enum": [
-        "green",
-        "red",
-        "blue"
+        "primaryBlue",
+        "goldenYellow",
+        "vividPurple",
+        "brightOrange",
+        "oliveGreen",
+        "cherryRed",
+        "tealBlue",
+        "coralPink",
+        "seaGreen"
       ]
     },
     "image": {
