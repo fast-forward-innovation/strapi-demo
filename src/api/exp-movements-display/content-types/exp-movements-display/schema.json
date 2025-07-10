@@ -11,17 +11,17 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Timeout": {
+    "timeout": {
       "type": "biginteger",
       "default": "0"
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Movements": {
+    "movements": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::movement.movement"

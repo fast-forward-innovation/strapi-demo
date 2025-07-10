@@ -11,16 +11,16 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Subtitle": {
+    "subTitle": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Color": {
+    "color": {
       "type": "enumeration",
       "enum": [
         "green",
@@ -28,7 +28,7 @@
         "blue"
       ]
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -37,7 +37,7 @@
         "files"
       ]
     },
-    "Stories": {
+    "stories": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::story.story"

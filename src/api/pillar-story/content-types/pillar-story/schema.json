@@ -28,6 +28,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pillar-story-chapter.pillar-story-chapter"
+    },
+    "exp_pillar_display": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exp-pillar-display.exp-pillar-display",
+      "inversedBy": "pillar_stories"
     }
   }
 }

@@ -454,17 +454,17 @@ export interface ApiExpMovementsDisplayExpMovementsDisplay
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::exp-movements-display.exp-movements-display'
     > &
       Schema.Attribute.Private;
-    Movements: Schema.Attribute.Relation<'oneToMany', 'api::movement.movement'>;
+    movements: Schema.Attribute.Relation<'oneToMany', 'api::movement.movement'>;
     publishedAt: Schema.Attribute.DateTime;
-    Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
-    Title: Schema.Attribute.String;
+    timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -472,10 +472,9 @@ export interface ApiExpMovementsDisplayExpMovementsDisplay
 }
 
 export interface ApiExpPillarDisplayExpPillarDisplay
-  extends Struct.SingleTypeSchema {
+  extends Struct.CollectionTypeSchema {
   collectionName: 'exp_pillar_displays';
   info: {
-    description: '';
     displayName: 'EXP - Pillar Display';
     pluralName: 'exp-pillar-displays';
     singularName: 'exp-pillar-display';
@@ -498,7 +497,7 @@ export interface ApiExpPillarDisplayExpPillarDisplay
       'api::pillar-story.pillar-story'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Timeout: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    Timeout: Schema.Attribute.Integer;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -605,15 +604,7 @@ export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Video: Schema.Attribute.Media<'files' | 'videos'>;
-    Year: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 2100;
-          min: 1900;
-        },
-        number
-      >;
-    YearText: Schema.Attribute.String;
+    Year: Schema.Attribute.String;
   };
 }
 
@@ -629,12 +620,12 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    Color: Schema.Attribute.Enumeration<['green', 'red', 'blue']>;
+    color: Schema.Attribute.Enumeration<['green', 'red', 'blue']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -642,9 +633,9 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Stories: Schema.Attribute.Relation<'oneToMany', 'api::story.story'>;
-    Subtitle: Schema.Attribute.String;
-    Title: Schema.Attribute.String;
+    stories: Schema.Attribute.Relation<'oneToMany', 'api::story.story'>;
+    subTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -717,6 +708,10 @@ export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Description: Schema.Attribute.Text;
+    exp_pillar_display: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::exp-pillar-display.exp-pillar-display'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -787,9 +782,9 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Item: Schema.Attribute.DynamicZone<
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    item: Schema.Attribute.DynamicZone<
       [
         'layouts.portrait-image-body-text',
         'layouts.body-text-portrait-image',
@@ -809,13 +804,13 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
         'layouts.quad-image-body-text',
       ]
     >;
-    Layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
+    layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
       Schema.Attribute.DefaultTo<'horizontal'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::story.story'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

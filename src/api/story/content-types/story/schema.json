@@ -11,13 +11,13 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Layout": {
+    "layout": {
       "type": "enumeration",
       "enum": [
         "horizontal",
@@ -25,7 +25,7 @@
       ],
       "default": "horizontal"
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -36,7 +36,7 @@
         "audios"
       ]
     },
-    "Item": {
+    "item": {
       "type": "dynamiczone",
       "components": [
         "layouts.portrait-image-body-text",

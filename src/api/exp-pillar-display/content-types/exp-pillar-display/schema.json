@@ -1,19 +1,17 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "exp_pillar_displays",
   "info": {
     "singularName": "exp-pillar-display",
     "pluralName": "exp-pillar-displays",
-    "displayName": "EXP - Pillar Display",
-    "description": ""
+    "displayName": "EXP - Pillar Display"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "Timeout": {
-      "type": "biginteger",
-      "default": "0"
+      "type": "integer"
     },
     "Title": {
       "type": "string"
@@ -21,7 +19,8 @@
     "pillar_stories": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::pillar-story.pillar-story"
+      "target": "api::pillar-story.pillar-story",
+      "mappedBy": "exp_pillar_display"
     }
   }
 }

@@ -20,11 +20,6 @@
     "Title": {
       "type": "string"
     },
-    "Year": {
-      "type": "integer",
-      "min": 1900,
-      "max": 2100
-    },
     "Image": {
       "type": "media",
       "multiple": false,
@@ -58,9 +53,8 @@
         "videos"
       ]
     },
-    "YearText": {
-      "type": "string",
-      "regex": "(19\\d{2}|20\\d{2}|2100)"
+    "Year": {
+      "type": "string"
     }
   }
 }
