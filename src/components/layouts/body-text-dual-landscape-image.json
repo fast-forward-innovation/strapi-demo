@@ -6,24 +6,13 @@
   },
   "options": {},
   "attributes": {
-    "Text": {
-      "type": "text"
-    },
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "Caption": {
-      "type": "text"
-    },
-    "Credit": {
+    "label": {
       "type": "string"
     },
-    "Image2": {
+    "text": {
+      "type": "text"
+    },
+    "image": {
       "allowedTypes": [
         "images",
         "files"
@@ -31,10 +20,24 @@
       "type": "media",
       "multiple": false
     },
-    "Caption2": {
+    "caption": {
       "type": "text"
     },
-    "Credit2": {
+    "credit": {
+      "type": "string"
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "caption2": {
+      "type": "text"
+    },
+    "credit2": {
       "type": "string"
     }
   }

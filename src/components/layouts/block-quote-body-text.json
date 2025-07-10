@@ -6,13 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "Text": {
+    "label": {
+      "type": "string"
+    },
+    "text": {
       "type": "text"
     },
-    "Quote": {
+    "quote": {
       "type": "text"
     },
-    "Source": {
+    "source": {
       "type": "text"
     }
   }

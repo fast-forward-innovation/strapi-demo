@@ -6,54 +6,57 @@
   },
   "options": {},
   "attributes": {
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "Credit": {
-      "type": "text"
-    },
-    "Image2": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "Credit2": {
-      "type": "text"
-    },
-    "Image3": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "Credit3": {
-      "type": "text"
-    },
-    "Image4": {
-      "allowedTypes": [
-        "images",
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "Credit4": {
+    "label": {
       "type": "string"
     },
-    "Caption": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "credit": {
       "type": "text"
     },
-    "Text": {
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "credit2": {
+      "type": "text"
+    },
+    "image3": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "credit3": {
+      "type": "text"
+    },
+    "image4": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "credit4": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "text"
+    },
+    "text": {
       "type": "text"
     }
   }

@@ -2,14 +2,18 @@
   "collectionName": "components_layouts_block_quotes",
   "info": {
     "displayName": "Block Quote",
-    "icon": "stack"
+    "icon": "stack",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Quote": {
+    "label": {
+      "type": "string"
+    },
+    "quote": {
       "type": "text"
     },
-    "Source": {
+    "source": {
       "type": "text"
     }
   }

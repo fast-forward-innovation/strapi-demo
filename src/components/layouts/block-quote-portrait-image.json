@@ -6,13 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "Quote": {
+    "label": {
+      "type": "string"
+    },
+    "quote": {
       "type": "text"
     },
-    "Source": {
+    "source": {
       "type": "text"
     },
-    "Image": {
+    "image": {
       "allowedTypes": [
         "images",
         "files"
@@ -20,10 +23,10 @@
       "type": "media",
       "multiple": false
     },
-    "Caption": {
+    "caption": {
       "type": "text"
     },
-    "Credit": {
+    "credit": {
       "type": "string"
     }
   }

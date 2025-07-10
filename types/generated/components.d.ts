@@ -3,12 +3,14 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface LayoutsBlockQuote extends Struct.ComponentSchema {
   collectionName: 'components_layouts_block_quotes';
   info: {
+    description: '';
     displayName: 'Block Quote';
     icon: 'stack';
   };
   attributes: {
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -19,9 +21,10 @@ export interface LayoutsBlockQuoteBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
-    Text: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -33,11 +36,12 @@ export interface LayoutsBlockQuoteLandscapeImage
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -48,11 +52,12 @@ export interface LayoutsBlockQuotePortraitImage extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -63,9 +68,10 @@ export interface LayoutsBodyTextBlockQuote extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
-    Text: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -77,13 +83,14 @@ export interface LayoutsBodyTextDualLandscapeImage
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Credit2: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Image2: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    caption2: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    credit2: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    image2: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -95,13 +102,14 @@ export interface LayoutsBodyTextDualPortraitImage
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Credit2: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Image2: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    caption2: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    credit2: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    image2: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -113,10 +121,11 @@ export interface LayoutsBodyTextLandscapeImage extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -127,10 +136,11 @@ export interface LayoutsBodyTextPortraitImage extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -142,13 +152,14 @@ export interface LayoutsDualLandscapeImageBodyText
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Credit2: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Image2: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    caption2: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    credit2: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    image2: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -160,13 +171,14 @@ export interface LayoutsDualPortraitImageBodyText
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Caption2: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Credit2: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Image2: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    caption2: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    credit2: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    image2: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -178,11 +190,12 @@ export interface LayoutsLandscapeImageBlockQuote
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -193,10 +206,11 @@ export interface LayoutsLandscapeImageBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -207,11 +221,12 @@ export interface LayoutsPortraitImageBlockQuote extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -222,10 +237,11 @@ export interface LayoutsPortraitImageBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -236,16 +252,17 @@ export interface LayoutsQuadImageBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Credit2: Schema.Attribute.Text;
-    Credit3: Schema.Attribute.Text;
-    Credit4: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Image2: Schema.Attribute.Media<'images' | 'files'>;
-    Image3: Schema.Attribute.Media<'images' | 'files'>;
-    Image4: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    credit2: Schema.Attribute.Text;
+    credit3: Schema.Attribute.Text;
+    credit4: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    image2: Schema.Attribute.Media<'images' | 'files'>;
+    image3: Schema.Attribute.Media<'images' | 'files'>;
+    image4: Schema.Attribute.Media<'images' | 'files'>;
+    label: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
