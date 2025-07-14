@@ -4,36 +4,44 @@
   "info": {
     "singularName": "pillar-story",
     "pluralName": "pillar-stories",
-    "displayName": "PillarStory"
+    "displayName": "PillarStory",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "MenuImage": {
+    "menuImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "pillar_story_chapters": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pillar-story-chapter.pillar-story-chapter"
     },
-    "exp_pillar_display": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::exp-pillar-display.exp-pillar-display",
-      "inversedBy": "pillar_stories"
+    "introText": {
+      "type": "string"
+    },
+    "introImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }

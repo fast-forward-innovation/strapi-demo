@@ -492,10 +492,6 @@ export interface ApiExpPillarDisplayExpPillarDisplay
       'api::exp-pillar-display.exp-pillar-display'
     > &
       Schema.Attribute.Private;
-    pillar_stories: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::pillar-story.pillar-story'
-    >;
     publishedAt: Schema.Attribute.DateTime;
     Timeout: Schema.Attribute.Integer;
     Title: Schema.Attribute.String;
@@ -708,6 +704,7 @@ export interface ApiPillarStoryChapterPillarStoryChapter
 export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
   collectionName: 'pillar_stories';
   info: {
+    description: '';
     displayName: 'PillarStory';
     pluralName: 'pillar-stories';
     singularName: 'pillar-story';
@@ -719,24 +716,22 @@ export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    exp_pillar_display: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::exp-pillar-display.exp-pillar-display'
-    >;
+    description: Schema.Attribute.Text;
+    introImage: Schema.Attribute.Media<'images' | 'files'>;
+    introText: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pillar-story.pillar-story'
     > &
       Schema.Attribute.Private;
-    MenuImage: Schema.Attribute.Media<'images' | 'files'>;
+    menuImage: Schema.Attribute.Media<'images' | 'files'>;
     pillar_story_chapters: Schema.Attribute.Relation<
       'oneToMany',
       'api::pillar-story-chapter.pillar-story-chapter'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
