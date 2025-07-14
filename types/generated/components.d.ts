@@ -274,8 +274,8 @@ export interface PillarStoryLayoutsBlockQuote extends Struct.ComponentSchema {
     icon: 'quote';
   };
   attributes: {
-    Quote: Schema.Attribute.Text;
-    Source: Schema.Attribute.Text;
+    quote: Schema.Attribute.Text;
+    source: Schema.Attribute.Text;
   };
 }
 
@@ -288,8 +288,8 @@ export interface PillarStoryLayoutsBodyBoldStatement
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
-    Text2: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
+    text2: Schema.Attribute.Text;
   };
 }
 
@@ -300,7 +300,7 @@ export interface PillarStoryLayoutsBodyText extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -313,10 +313,10 @@ export interface PillarStoryLayoutsBodyTextLandscapeImage
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -329,10 +329,10 @@ export interface PillarStoryLayoutsBodyTextPortraitImage
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -345,8 +345,8 @@ export interface PillarStoryLayoutsBodyVeryBoldStatement
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
-    Text2: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
+    text2: Schema.Attribute.Text;
   };
 }
 
@@ -358,7 +358,7 @@ export interface PillarStoryLayoutsBoldStatementBoxed
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -371,8 +371,8 @@ export interface PillarStoryLayoutsCircleGraphicStatement
     icon: 'stack';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -385,10 +385,10 @@ export interface PillarStoryLayoutsLandscapeImageBodyText
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -401,10 +401,10 @@ export interface PillarStoryLayoutsLargeImageBoldCaption
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -417,10 +417,10 @@ export interface PillarStoryLayoutsLargeImageBoldCaptionAbove
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -433,10 +433,10 @@ export interface PillarStoryLayoutsPortraitImageBodyText
     icon: 'stack';
   };
   attributes: {
-    Caption: Schema.Attribute.Text;
-    Credit: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    caption: Schema.Attribute.Text;
+    credit: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -449,7 +449,7 @@ export interface PillarStoryLayoutsSemiBoldStatement
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -462,8 +462,8 @@ export interface PillarStoryLayoutsSquareGraphicStatement
     icon: 'stack';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -476,8 +476,8 @@ export interface PillarStoryLayoutsStatementCircleGraphic
     icon: 'stack';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -490,8 +490,8 @@ export interface PillarStoryLayoutsStatementSquareGraphic
     icon: 'stack';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Text: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -504,7 +504,7 @@ export interface PillarStoryLayoutsVeryBoldStatement
     icon: 'stack';
   };
   attributes: {
-    Text: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -536,12 +536,12 @@ export interface SharedMovieStory extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
-    Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    Layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    layout: Schema.Attribute.Enumeration<['horizontal', 'vertical']> &
       Schema.Attribute.DefaultTo<'horizontal'>;
     movements: Schema.Attribute.Relation<'oneToMany', 'api::movement.movement'>;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 

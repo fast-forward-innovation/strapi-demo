@@ -4,25 +4,27 @@
   "info": {
     "singularName": "victim",
     "pluralName": "victims",
-    "displayName": "Victim"
+    "displayName": "Victim",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Year": {
+    "year": {
       "type": "integer"
     },
-    "Image": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

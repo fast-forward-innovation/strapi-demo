@@ -7,10 +7,10 @@
   },
   "options": {},
   "attributes": {
-    "Quote": {
+    "quote": {
       "type": "text"
     },
-    "Source": {
+    "source": {
       "type": "text"
     }
   }

@@ -4,24 +4,26 @@
   "info": {
     "singularName": "pillar-story-chapter",
     "pluralName": "pillar-story-chapters",
-    "displayName": "PillarStoryChapter"
+    "displayName": "PillarStoryChapter",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Icon": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "StoryItems": {
+    "storyItems": {
       "type": "dynamiczone",
       "components": [
         "pillar-story-layouts.body-text",

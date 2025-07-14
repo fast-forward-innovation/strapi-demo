@@ -4,19 +4,21 @@
   "info": {
     "singularName": "exp-hope-is-a-discipline",
     "pluralName": "exp-hope-is-a-disciplines",
-    "displayName": "EXP - Hope is a Discipline"
+    "displayName": "EXP - Hope is a Discipline",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Playlist": {
+    "playlist": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

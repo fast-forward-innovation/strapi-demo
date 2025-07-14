@@ -11,14 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Timeout": {
-      "type": "decimal",
+    "timeout": {
+      "type": "integer",
       "default": 0
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Video1": {
+    "video1": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -27,7 +27,7 @@
         "videos"
       ]
     },
-    "Video2": {
+    "video2": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -36,7 +36,7 @@
         "videos"
       ]
     },
-    "Video3": {
+    "video3": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -45,7 +45,7 @@
         "videos"
       ]
     },
-    "Video4": {
+    "video4": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -54,7 +54,7 @@
         "videos"
       ]
     },
-    "Honorees": {
+    "honorees": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::honoree.honoree"

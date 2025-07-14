@@ -11,16 +11,16 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "FirstName": {
+    "firstName": {
       "type": "string"
     },
-    "LastName": {
+    "lastName": {
       "type": "string"
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -29,7 +29,7 @@
         "files"
       ]
     },
-    "Thumbnail": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -38,13 +38,13 @@
         "files"
       ]
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Quote": {
+    "quote": {
       "type": "text"
     },
-    "Video": {
+    "video": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -53,7 +53,7 @@
         "videos"
       ]
     },
-    "Year": {
+    "year": {
       "type": "string"
     }
   }

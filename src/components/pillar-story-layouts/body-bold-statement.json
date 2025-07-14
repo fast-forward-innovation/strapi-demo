@@ -7,10 +7,10 @@
     },
     "options": {},
     "attributes": {
-        "Text": {
+        "text": {
             "type": "text"
         },
-        "Text2": {
+        "text2": {
             "type": "text"
         }
     }

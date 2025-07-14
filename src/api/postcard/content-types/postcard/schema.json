@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Postcards": {
+    "postcards": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -22,16 +22,16 @@
         "audios"
       ]
     },
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Active": {
+    "active": {
       "type": "boolean"
     },
-    "Publish_On": {
+    "publishOn": {
       "type": "date"
     },
-    "Expire_On": {
+    "expireOn": {
       "type": "date"
     }
   }

@@ -7,10 +7,10 @@
     },
     "options": {},
     "attributes": {
-        "Text": {
+        "text": {
             "type": "text"
         },
-        "Image": {
+        "image": {
             "type": "media",
             "multiple": false,
             "required": false,
@@ -19,10 +19,10 @@
                 "files"
             ]
         },
-        "Caption": {
+        "caption": {
             "type": "text"
         },
-        "Credit": {
+        "credit": {
             "type": "text"
         }
     }

@@ -7,13 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Layout": {
+    "layout": {
       "type": "enumeration",
       "enum": [
         "horizontal",
@@ -21,7 +21,7 @@
       ],
       "default": "horizontal"
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,

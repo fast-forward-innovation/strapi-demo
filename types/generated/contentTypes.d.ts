@@ -389,7 +389,7 @@ export interface ApiExpHonoreesWallExpHonoreesWall
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Honorees: Schema.Attribute.Relation<'oneToMany', 'api::honoree.honoree'>;
+    honorees: Schema.Attribute.Relation<'oneToMany', 'api::honoree.honoree'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -397,15 +397,15 @@ export interface ApiExpHonoreesWallExpHonoreesWall
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Timeout: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
-    Title: Schema.Attribute.String;
+    timeout: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Video1: Schema.Attribute.Media<'files' | 'videos'>;
-    Video2: Schema.Attribute.Media<'files' | 'videos'>;
-    Video3: Schema.Attribute.Media<'files' | 'videos'>;
-    Video4: Schema.Attribute.Media<'files' | 'videos'>;
+    video1: Schema.Attribute.Media<'files' | 'videos'>;
+    video2: Schema.Attribute.Media<'files' | 'videos'>;
+    video3: Schema.Attribute.Media<'files' | 'videos'>;
+    video4: Schema.Attribute.Media<'files' | 'videos'>;
   };
 }
 
@@ -413,6 +413,7 @@ export interface ApiExpHopeIsADisciplineExpHopeIsADiscipline
   extends Struct.SingleTypeSchema {
   collectionName: 'exp_hope_is_a_disciplines';
   info: {
+    description: '';
     displayName: 'EXP - Hope is a Discipline';
     pluralName: 'exp-hope-is-a-disciplines';
     singularName: 'exp-hope-is-a-discipline';
@@ -430,7 +431,7 @@ export interface ApiExpHopeIsADisciplineExpHopeIsADiscipline
       'api::exp-hope-is-a-discipline.exp-hope-is-a-discipline'
     > &
       Schema.Attribute.Private;
-    Playlist: Schema.Attribute.Media<'images' | 'files', true>;
+    playlist: Schema.Attribute.Media<'images' | 'files', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -475,6 +476,7 @@ export interface ApiExpPillarDisplayExpPillarDisplay
   extends Struct.CollectionTypeSchema {
   collectionName: 'exp_pillar_displays';
   info: {
+    description: '';
     displayName: 'EXP - Pillar Display';
     pluralName: 'exp-pillar-displays';
     singularName: 'exp-pillar-display';
@@ -493,8 +495,8 @@ export interface ApiExpPillarDisplayExpPillarDisplay
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Timeout: Schema.Attribute.Integer;
-    Title: Schema.Attribute.String;
+    timeout: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -517,10 +519,10 @@ export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    FeaturedDescription: Schema.Attribute.Text;
-    FeaturedImage: Schema.Attribute.Media<'files' | 'images'>;
-    FeaturedName: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    featuredDescription: Schema.Attribute.Text;
+    featuredImage: Schema.Attribute.Media<'files' | 'images'>;
+    featuredName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -528,11 +530,11 @@ export interface ApiExpSayTheirNamesProjectionExpSayTheirNamesProjection
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Victims: Schema.Attribute.Relation<'oneToMany', 'api::victim.victim'>;
+    victims: Schema.Attribute.Relation<'oneToMany', 'api::victim.victim'>;
   };
 }
 
@@ -582,10 +584,10 @@ export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Text;
-    FirstName: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
-    LastName: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    firstName: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -593,14 +595,14 @@ export interface ApiHonoreeHonoree extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Quote: Schema.Attribute.Text;
-    Thumbnail: Schema.Attribute.Media<'images' | 'files'>;
-    Title: Schema.Attribute.String;
+    quote: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'images' | 'files'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Video: Schema.Attribute.Media<'files' | 'videos'>;
-    Year: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'files' | 'videos'>;
+    year: Schema.Attribute.String;
   };
 }
 
@@ -654,6 +656,7 @@ export interface ApiPillarStoryChapterPillarStoryChapter
   extends Struct.CollectionTypeSchema {
   collectionName: 'pillar_story_chapters';
   info: {
+    description: '';
     displayName: 'PillarStoryChapter';
     pluralName: 'pillar-story-chapters';
     singularName: 'pillar-story-chapter';
@@ -665,7 +668,7 @@ export interface ApiPillarStoryChapterPillarStoryChapter
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Icon: Schema.Attribute.Media<'images' | 'files'>;
+    icon: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -673,7 +676,7 @@ export interface ApiPillarStoryChapterPillarStoryChapter
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    StoryItems: Schema.Attribute.DynamicZone<
+    storyItems: Schema.Attribute.DynamicZone<
       [
         'pillar-story-layouts.body-text',
         'pillar-story-layouts.portrait-image-body-text',
@@ -694,7 +697,7 @@ export interface ApiPillarStoryChapterPillarStoryChapter
         'pillar-story-layouts.very-bold-statement',
       ]
     >;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -750,24 +753,24 @@ export interface ApiPostcardPostcard extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Active: Schema.Attribute.Boolean;
+    active: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Expire_On: Schema.Attribute.Date;
+    expireOn: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::postcard.postcard'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
-    Postcards: Schema.Attribute.Media<
+    name: Schema.Attribute.String;
+    postcards: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    Publish_On: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    publishOn: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -827,6 +830,7 @@ export interface ApiStoryStory extends Struct.CollectionTypeSchema {
 export interface ApiVictimVictim extends Struct.CollectionTypeSchema {
   collectionName: 'victims';
   info: {
+    description: '';
     displayName: 'Victim';
     pluralName: 'victims';
     singularName: 'victim';
@@ -838,19 +842,19 @@ export interface ApiVictimVictim extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::victim.victim'
     > &
       Schema.Attribute.Private;
-    Name: Schema.Attribute.String;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Year: Schema.Attribute.Integer;
+    year: Schema.Attribute.Integer;
   };
 }
 

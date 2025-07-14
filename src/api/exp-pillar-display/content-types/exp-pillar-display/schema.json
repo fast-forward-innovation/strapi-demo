@@ -4,16 +4,17 @@
   "info": {
     "singularName": "exp-pillar-display",
     "pluralName": "exp-pillar-displays",
-    "displayName": "EXP - Pillar Display"
+    "displayName": "EXP - Pillar Display",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "Timeout": {
+    "timeout": {
       "type": "integer"
     },
-    "Title": {
+    "title": {
       "type": "string"
     }
   }

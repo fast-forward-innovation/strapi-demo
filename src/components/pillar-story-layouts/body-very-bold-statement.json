@@ -1,17 +1,17 @@
 {
-    "collectionName": "components_pillar_story_layouts_body_very_bold_statements",
-    "info": {
-        "displayName": "Body - Very Bold Statement",
-        "icon": "stack",
-        "description": ""
+  "collectionName": "components_pillar_story_layouts_body_very_bold_statements",
+  "info": {
+    "displayName": "Body - Very Bold Statement",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
     },
-    "options": {},
-    "attributes": {
-        "Text": {
-            "type": "text"
-        },
-        "Text2": {
-            "type": "text"
-        }
+    "text2": {
+      "type": "text"
     }
+  }
 }
