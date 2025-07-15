@@ -16,6 +16,12 @@
     },
     "title": {
       "type": "string"
+    },
+    "pillar_stories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pillar-story.pillar-story",
+      "mappedBy": "exp_pillar_display"
     }
   }
 }

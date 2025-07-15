@@ -494,6 +494,10 @@ export interface ApiExpPillarDisplayExpPillarDisplay
       'api::exp-pillar-display.exp-pillar-display'
     > &
       Schema.Attribute.Private;
+    pillar_stories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pillar-story.pillar-story'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     timeout: Schema.Attribute.Integer;
     title: Schema.Attribute.String;
@@ -720,6 +724,10 @@ export interface ApiPillarStoryPillarStory extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    exp_pillar_display: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::exp-pillar-display.exp-pillar-display'
+    >;
     introImage: Schema.Attribute.Media<'images' | 'files'>;
     introText: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
